@@ -13,6 +13,8 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@Venubalan-T'
+      - run: npm config rm proxy
+      - run: npm config rm https-proxy
       - run: npm install
       - run: npm publish
         env:
